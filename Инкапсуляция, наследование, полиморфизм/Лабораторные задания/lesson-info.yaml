@@ -1,0 +1,7 @@
+content:
+- task1_LinkedList_head_tail_property
+- task2_DoubleLinkedNode_inheritance
+- task3_LinkedList__mul__
+- task4_LinkedList__rmul__
+- task4_LinkedList__imul__
+- task6_DoubleLinkedList_inheritance

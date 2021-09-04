@@ -1,0 +1,134 @@
+type: edu
+files:
+- name: task.py
+  visible: true
+  placeholders:
+  - offset: 415
+    length: 28
+    placeholder_text: '# TODO установить значение следующего узла с помощью метода
+      set_next'
+    initial_state:
+      length: 68
+      offset: 399
+    initialized_from_dependency: false
+    selected: true
+    status: Solved
+    encrypted_possible_answer: |-
+      self.next = None
+              self.set_next(next_)
+  - offset: 578
+    length: 72
+    placeholder_text: |-
+      # TODO метод проверки корректности связываемого узла
+              ...
+    initial_state:
+      length: 64
+      offset: 602
+    initialized_from_dependency: false
+    selected: true
+    status: Solved
+    encrypted_possible_answer: |-
+      if not isinstance(node, (type(None), Node)):
+                  raise TypeError
+  - offset: 716
+    length: 55
+    placeholder_text: |-
+      # TODO метод должен проверять корректность узла и устанавливать значение атрибуту next
+              ...
+    initial_state:
+      length: 98
+      offset: 740
+    initialized_from_dependency: false
+    selected: true
+    status: Solved
+    encrypted_possible_answer: |-
+      self.is_valid(next_)
+              self.next = next_
+  - offset: 805
+    length: 83
+    placeholder_text: |-
+      # TODO
+          ...
+    initial_state:
+      length: 14
+      offset: 872
+    initialized_from_dependency: false
+    selected: true
+    status: Solved
+    encrypted_possible_answer: |-
+      first_node = Node("first_node")
+          second_node = Node("second_node")
+
+          first_node.set_next(second_node)
+
+          print(first_node, second_node)
+  text: |
+    from typing import Any, Optional
+
+
+    class Node:
+        """ Класс, который описывает узел связного списка. """
+
+        def __init__(self, value: Any, next_: Optional["Node"] = None):
+            """
+            Создаем новый узел для односвязного списка
+            :param value: Любое значение, которое помещено в узел
+            :param next_: следующий узел, если он есть
+            """
+            self.value = value
+
+            # TODO установить значение следующего узла с помощью метода set_next
+
+        def __repr__(self) -> str:
+            return f"Node({self.value}, {self.next})"
+
+        def is_valid(self, node: Any) -> None:
+            # TODO метод проверки корректности связываемого узла
+            ...
+
+        def set_next(self, next_: Optional["Node"] = None) -> None:
+            # TODO метод должен проверять корректность узла и устанавливать значение атрибуту next
+            ...
+
+
+    if __name__ == '__main__':
+        # TODO
+        ...
+  learner_created: false
+- name: tests/test_task.py
+  visible: false
+  text: |
+    import unittest
+
+    from task import Node
+
+
+    # todo: replace this with an actual test
+    class TestCase(unittest.TestCase):
+        def test_is_valid(self):
+            node = Node(None)
+
+            msg = f"Метод is_valid должен генерировать ошибку \"TypeError\", " \
+                  f"если тип проверяемого объекта не \"{Node.__name__}\" или не \"{type(None).__name__}"
+            with self.assertRaises(TypeError, msg=msg):
+                node.is_valid("incorrect_type")
+
+        def test_init_node(self):
+            # todo init node with next and without
+            ...
+
+        def test_set_next(self):
+            # todo test set next
+            ...
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+- name: tests/__init__.py
+  visible: false
+  learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Sat, 04 Sep 2021 09:48:57 UTC
+record: -1

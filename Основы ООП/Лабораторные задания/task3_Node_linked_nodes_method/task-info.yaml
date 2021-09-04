@@ -1,0 +1,101 @@
+type: edu
+files:
+- name: task.py
+  visible: true
+  placeholders:
+  - offset: 1025
+    length: 100
+    placeholder_text: '...  # TODO реализовать функцию'
+    initial_state:
+      length: 31
+      offset: 1025
+    initialized_from_dependency: false
+    selected: true
+    status: Failed
+    encrypted_possible_answer: left_node.set_next(right_node)
+  - offset: 1159
+    length: 24
+    placeholder_text: '...  # TODO самостоятельно проверьте работоспособность  функции
+      linked_nodes'
+    initial_state:
+      length: 76
+      offset: 1090
+    initialized_from_dependency: false
+    selected: false
+    status: Failed
+    encrypted_possible_answer: '...'
+  text: |
+    from typing import Any, Optional
+
+
+    class Node:
+        """ Класс, который описывает узел связного списка. """
+
+        def __init__(self, value: Any, next_: Optional["Node"] = None):
+            """
+            Создаем новый узел для односвязного списка
+            :param value: Любое значение, которое помещено в узел
+            :param next_: следующий узел, если он есть
+            """
+            self.value = value
+
+            self.next = None
+            self.set_next(next_)
+
+        def __repr__(self) -> str:
+            return f"Node({self.value}, {self.next})"
+
+        def is_valid(self, node: Any) -> None:
+            if not isinstance(node, (type(None), Node)):
+                raise TypeError
+
+        def set_next(self, next_: Optional["Node"] = None) -> None:
+            self.is_valid(next_)
+            self.next = next_
+
+
+    def linked_nodes(left_node: Node, right_node: Optional["Node"] = None) -> None:
+        """
+        Функция, которая связывает между собой два узла.
+
+        :param left_node: Левый или предыдущий узел
+        :param right_node: Правый или следующий узел
+        """
+        ...  # TODO реализовать функцию
+
+
+    if __name__ == '__main__':
+        ...  # TODO самостоятельно проверьте работоспособность  функции linked_nodes
+  learner_created: false
+- name: tests/test_task.py
+  visible: false
+  text: |
+    import unittest
+
+    from task import Node, linked_nodes
+
+
+    # todo: replace this with an actual test
+    class TestCase(unittest.TestCase):
+        def test_linked_nodes(self):
+            left_node = Node("left")
+            right_node = Node("right")
+
+            linked_nodes(left_node, right_node)
+
+            msg = "Узлы не были успешно связаны. Проверьте функцию linked_nodes. "
+            self.assertEqual(repr(left_node.next), repr(right_node), msg)
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+- name: tests/__init__.py
+  visible: false
+  learner_created: false
+status: Failed
+feedback:
+  message: '''None'' != ''Node(right, None)'''
+  time: Sat, 04 Sep 2021 09:58:43 UTC
+  expected: None
+  actual: Node(right, None)
+record: -1

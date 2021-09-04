@@ -1,0 +1,93 @@
+type: output
+files:
+- name: main.py
+  visible: true
+  placeholders:
+  - offset: 371
+    length: 45
+    placeholder_text: '...  # TODO добавить атрибуты'
+    initial_state:
+      length: 29
+      offset: 371
+    initialized_from_dependency: false
+    selected: true
+    status: Solved
+    encrypted_possible_answer: |-
+      self.value = value
+              self.next = next_
+  - offset: 457
+    length: 17
+    placeholder_text: '...  # TODO вернуть значение узла'
+    initial_state:
+      length: 33
+      offset: 442
+    initialized_from_dependency: false
+    selected: false
+    status: Solved
+    encrypted_possible_answer: return self.value
+  - offset: 480
+    length: 46
+    placeholder_text: '# TODO добавить метод get_next'
+    initial_state:
+      length: 30
+      offset: 481
+    initialized_from_dependency: false
+    selected: true
+    status: Solved
+    encrypted_possible_answer: |-
+      def get_next(self) -> Optional["Node"]:
+              return self.next
+  - offset: 605
+    length: 67
+    placeholder_text: '...  # TODO c помощью методов распечатать значение первого
+      узла и следующий узел второго узла'
+    initial_state:
+      length: 93
+      offset: 597
+    initialized_from_dependency: false
+    selected: true
+    status: Solved
+    encrypted_possible_answer: |-
+      print(first_node.get_value())
+          print(second_node.get_next())
+  text: |
+    from typing import Any, Optional
+
+
+    class Node:
+        """ Класс, который описывает узел связного списка. """
+
+        def __init__(self, value: Any, next_: Optional["Node"] = None):
+            """
+            Создаем новый узел для односвязного списка
+            :param value: Любое значение, которое помещено в узел
+            :param next_: следующий узел, если он есть
+            """
+            ...  # TODO добавить атрибуты
+
+        def get_value(self) -> Any:
+            ...  # TODO вернуть значение узла
+
+        # TODO добавить метод get_next
+
+
+    if __name__ == '__main__':
+        first_node = Node(1)
+        second_node = Node(2)
+
+        ...  # TODO c помощью методов распечатать значение первого узла и следующий узел второго узла
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+- name: tests/output.txt
+  visible: false
+  text: |
+    1
+    None
+  learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Sat, 04 Sep 2021 08:59:17 UTC
+record: -1

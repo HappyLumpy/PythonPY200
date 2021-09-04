@@ -1,0 +1,6 @@
+content:
+- task2_LinkdeList__getitem__str__repr__
+- task2_LinkedList__setitem__
+- task2_LinkedList__delitem__
+- task2_LinkedList_clear
+- task7_LinkedList_insert

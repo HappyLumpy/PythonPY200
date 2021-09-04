@@ -1,0 +1,56 @@
+type: edu
+files:
+- name: task.py
+  visible: true
+  placeholders:
+  - offset: 261
+    length: 31
+    placeholder_text: '# TODO добавить атрибут и метод'
+    initial_state:
+      length: 31
+      offset: 261
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      self.material = material
+
+          def get_material(self):
+              return self.material
+  text: |+
+    class Glass:
+        def __init__(self, capacity_volume: [int, float], occupied_volume: [int, float], material: str):
+            self.capacity_volume = capacity_volume  # объем стакана
+            self.occupied_volume = occupied_volume  # объем жидкости в стакане
+            # TODO добавить атрибут и метод
+
+
+    if __name__ == "__main__":
+        ...
+
+  learner_created: false
+- name: tests/test_task.py
+  visible: false
+  text: |
+    import unittest
+
+    from task import Glass
+
+
+    class TestCase(unittest.TestCase):
+        # todo check get_material method
+
+        def test_get_material(self):
+            material = "paper"
+            glass = Glass(100, 100, material=material)
+            self.assertEqual(material, glass.get_material(),
+                             msg="Метод get_material должен возвращать материал стакана.")
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+- name: tests/__init__.py
+  visible: false
+  learner_created: false
+status: Unchecked
+record: -1

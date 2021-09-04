@@ -1,0 +1,28 @@
+type: theory
+files:
+- name: main.py
+  visible: true
+  text: |
+    class TriangleCalculator:
+
+        @classmethod
+        def area(cls, *args):
+            if len(args) == 2:
+                cls.area_height(*args)
+            if len(args) == 3:
+                cls.area_by_angle(*args)
+
+        @staticmethod
+        def area_by_angle(a, b, angle):
+            ...
+
+        @staticmethod
+        def area_height(a, h):
+            ...
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+status: Unchecked
+record: -1
+post_submission_on_open: true

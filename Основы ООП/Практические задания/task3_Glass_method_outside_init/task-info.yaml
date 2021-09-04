@@ -1,0 +1,84 @@
+type: theory
+files:
+- name: main.py
+  visible: true
+  placeholders:
+  - offset: 159
+    length: 42
+    placeholder_text: |-
+      #  TODO заменить на метод
+              if not isinstance(capacity_volume, (int, float)):
+                  raise TypeError
+              if not capacity_volume > 0:
+                  raise ValueError
+              self.capacity_volume = capacity_volume  # объем стакана
+    initial_state:
+      length: 240
+      offset: 122
+    initialized_from_dependency: false
+    selected: true
+    status: Solved
+    encrypted_possible_answer: |-
+      self.capacity_volume = None
+              self.init_capacity_volume(capacity_volume)
+  - offset: 425
+    length: 264
+    placeholder_text: '#  TODO создать метод, который будет инициализировать атрибут
+      capacity_volume'
+    initial_state:
+      length: 77
+      offset: 587
+    initialized_from_dependency: false
+    selected: true
+    status: Solved
+    encrypted_possible_answer: |2-
+          def init_capacity_volume(self, capacity_volume: [int, float]):
+              if not isinstance(capacity_volume, (int, float)):
+                  raise TypeError
+              if not capacity_volume > 0:
+                  raise ValueError
+              self.capacity_volume = capacity_volume  # объем стакана
+  - offset: 723
+    length: 43
+    placeholder_text: |-
+      #  TODO самостоятельно создайте экземпляр класса Glass и выведите  его атрибуты capacity_volume и occupied_volume
+          ...
+    initial_state:
+      length: 121
+      offset: 698
+    initialized_from_dependency: false
+    selected: true
+    status: Solved
+    encrypted_possible_answer: |
+      glass = Glass(200, 100)  # экземпляр класса
+          print(glass.capacity_volume, glass.occupied_volume)
+  text: |-
+    class Glass:
+        """Тест"""
+        def __init__(self, capacity_volume: [int, float], occupied_volume: [int, float]):
+            #  TODO заменить на метод
+            if not isinstance(capacity_volume, (int, float)):
+                raise TypeError
+            if not capacity_volume > 0:
+                raise ValueError
+            self.capacity_volume = capacity_volume  # объем стакана
+
+            if not isinstance(occupied_volume, (int, float)):
+                raise TypeError
+            if occupied_volume < 0:
+                raise ValueError
+            self.occupied_volume = occupied_volume  # объем жидкости в стакане
+
+    #  TODO создать метод, который будет инициализировать атрибут capacity_volume
+
+
+    if __name__ == "__main__":
+        #  TODO самостоятельно создайте экземпляр класса Glass и выведите  его атрибуты capacity_volume и occupied_volume
+        ...
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+status: Solved
+record: -1
+post_submission_on_open: true
