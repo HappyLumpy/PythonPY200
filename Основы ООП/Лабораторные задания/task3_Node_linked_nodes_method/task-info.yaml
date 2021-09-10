@@ -4,25 +4,25 @@ files:
   visible: true
   placeholders:
   - offset: 1025
-    length: 100
+    length: 37
     placeholder_text: '...  # TODO реализовать функцию'
     initial_state:
       length: 31
       offset: 1025
     initialized_from_dependency: false
     selected: true
-    status: Failed
+    status: Solved
     encrypted_possible_answer: left_node.set_next(right_node)
-  - offset: 1159
-    length: 24
+  - offset: 1138
+    length: 34
     placeholder_text: '...  # TODO самостоятельно проверьте работоспособность  функции
       linked_nodes'
     initial_state:
       length: 76
       offset: 1090
     initialized_from_dependency: false
-    selected: false
-    status: Failed
+    selected: true
+    status: Solved
     encrypted_possible_answer: '...'
   text: |
     from typing import Any, Optional
@@ -92,10 +92,8 @@ files:
 - name: tests/__init__.py
   visible: false
   learner_created: false
-status: Failed
+status: Solved
 feedback:
-  message: '''None'' != ''Node(right, None)'''
-  time: Sat, 04 Sep 2021 09:58:43 UTC
-  expected: None
-  actual: Node(right, None)
+  message: Congratulations!
+  time: Mon, 06 Sep 2021 18:59:48 UTC
 record: -1

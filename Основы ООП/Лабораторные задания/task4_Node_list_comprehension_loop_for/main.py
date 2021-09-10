@@ -18,8 +18,8 @@ class Node:
 
 
 if __name__ == "__main__":
-    list_nodes = Node([x for x in range(10)])
+    list_nodes = [Node(x) for x in range(10)]
     print(list_nodes)
 
     for nodes in list_nodes:
-        print(nodes)
+        print(nodes.value)

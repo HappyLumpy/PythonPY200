@@ -34,11 +34,10 @@ def linked_nodes(left_node: Node, right_node: Optional["Node"] = None) -> None:
     :param left_node: Левый или предыдущий узел
     :param right_node: Правый или следующий узел
     """
-    node_1 = Node(left_node)
-    node_2 = Node(right_node)
-    node_1.set_next(node_2)
-    return node_1
+    return left_node.set_next(right_node)
 
 
 if __name__ == '__main__':
-    print(linked_nodes(7,4))
+    node_1 = Node(1)
+    node_2 = Node(2)
+    print(linked_nodes(node_1,node_2))

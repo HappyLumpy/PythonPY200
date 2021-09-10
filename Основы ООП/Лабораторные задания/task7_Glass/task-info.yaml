@@ -4,14 +4,14 @@ files:
   visible: true
   placeholders:
   - offset: 0
-    length: 27
+    length: 777
     placeholder_text: '# TODO  создать класс Glass'
     initial_state:
       length: 27
       offset: 0
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: |-
       class Glass:
           def __init__(self, capacity_volume: [int, float], occupied_volume: [int, float]):
@@ -58,5 +58,8 @@ files:
 - name: tests/__init__.py
   visible: false
   learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Mon, 06 Sep 2021 19:52:12 UTC
 record: -1

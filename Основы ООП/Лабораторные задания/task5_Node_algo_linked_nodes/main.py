@@ -19,7 +19,7 @@ class Node:
         return f"Node({self.value}, {None})" if self.next is None else f"Node({self.value}, Node({self.next}))"
 
     def __str__(self) -> str:
-        ...  # TODO метод должен возвращать значение текущего узла
+        return f"{self.value}"
 
     def is_valid(self, node: Any) -> None:
         if not isinstance(node, (type(None), Node)):
@@ -43,7 +43,12 @@ def linked_nodes(left_node: Node, right_node: Optional["Node"] = None) -> None:
 if __name__ == "__main__":
     list_nodes = [Node(value) for value in range(10)]
     print(list_nodes)
-
-    # TODO реализуйте алгоритм, который свяжет между собой узлы в списке
+    next_node = 0
+    for node in list_nodes:
+        next_node += 1
+        if next_node < len(list_nodes):
+            linked_nodes(node,list_nodes[next_node])
+        else:
+            linked_nodes(node)
 
     print(list_nodes)
