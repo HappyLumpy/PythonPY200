@@ -4,13 +4,13 @@ files:
   visible: true
   placeholders:
   - offset: 0
-    length: 1164
+    length: 17
     placeholder_text: '# TODO class Date'
     initial_state:
       length: 17
       offset: 0
     initialized_from_dependency: false
-    selected: true
+    selected: false
     status: Solved
     encrypted_possible_answer: |
       # TODO
@@ -36,5 +36,5 @@ files:
 status: Solved
 feedback:
   message: Congratulations!
-  time: Fri, 10 Sep 2021 17:42:39 UTC
+  time: Sat, 11 Sep 2021 07:08:55 UTC
 record: -1

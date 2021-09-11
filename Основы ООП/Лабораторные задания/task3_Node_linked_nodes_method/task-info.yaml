@@ -4,7 +4,7 @@ files:
   visible: true
   placeholders:
   - offset: 1025
-    length: 37
+    length: 89
     placeholder_text: '...  # TODO реализовать функцию'
     initial_state:
       length: 31
@@ -13,15 +13,15 @@ files:
     selected: true
     status: Solved
     encrypted_possible_answer: left_node.set_next(right_node)
-  - offset: 1138
-    length: 34
+  - offset: 1148
+    length: 24
     placeholder_text: '...  # TODO самостоятельно проверьте работоспособность  функции
       linked_nodes'
     initial_state:
       length: 76
       offset: 1090
     initialized_from_dependency: false
-    selected: true
+    selected: false
     status: Solved
     encrypted_possible_answer: '...'
   text: |
@@ -95,5 +95,5 @@ files:
 status: Solved
 feedback:
   message: Congratulations!
-  time: Mon, 06 Sep 2021 18:59:48 UTC
+  time: Sat, 11 Sep 2021 07:09:12 UTC
 record: -1

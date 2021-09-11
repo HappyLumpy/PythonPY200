@@ -22,7 +22,7 @@ files:
   visible: true
   placeholders:
   - offset: 544
-    length: 108
+    length: 28
     placeholder_text: '...  # TODO с помощью list comprehension сделать список узлов
       со значениями от 0 до 9'
     initial_state:
@@ -32,8 +32,8 @@ files:
     selected: true
     status: Solved
     encrypted_possible_answer: '[Node(value) for value in range(10)]'
-  - offset: 545
-    length: 107
+  - offset: 600
+    length: 45
     placeholder_text: '# TODO распечатать значения узлов'
     initial_state:
       length: 33
@@ -73,5 +73,5 @@ files:
 status: Solved
 feedback:
   message: Congratulations!
-  time: Mon, 06 Sep 2021 19:03:14 UTC
+  time: Sat, 11 Sep 2021 07:09:19 UTC
 record: -1

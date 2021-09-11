@@ -3,14 +3,14 @@ files:
 - name: task.py
   visible: true
   placeholders:
-  - offset: 0
-    length: 488
+  - offset: 261
+    length: 31
     placeholder_text: '# TODO добавить атрибут и метод'
     initial_state:
       length: 31
       offset: 261
     initialized_from_dependency: false
-    selected: true
+    selected: false
     status: Solved
     encrypted_possible_answer: |-
       self.material = material
@@ -55,5 +55,5 @@ files:
 status: Solved
 feedback:
   message: Congratulations!
-  time: Mon, 06 Sep 2021 20:04:54 UTC
+  time: Sat, 11 Sep 2021 07:09:04 UTC
 record: -1

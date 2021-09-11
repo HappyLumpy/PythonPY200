@@ -55,7 +55,7 @@ class LinkedList:
         return node.value
 
     def __str__(self) -> str:
-        return f"{[node for node in self]}"
+        return f"{[node_value for node_value in self]}"
 
 
 if __name__ == '__main__':

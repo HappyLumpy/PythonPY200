@@ -4,21 +4,21 @@ files:
   visible: true
   placeholders:
   - offset: 470
-    length: 46
+    length: 181
     placeholder_text: '# TODO составьте алгоритм, который свяжет узлы'
     initial_state:
       length: 46
       offset: 470
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: |-
       for i in range(len(self.list_nodes) - 1):
                   current_node = self.list_nodes[i]
                   next_node = self.list_nodes[i + 1]
                   self.linked_nodes(current_node, next_node)
-  - offset: 522
-    length: 124
+  - offset: 657
+    length: 95
     placeholder_text: |-
       # TODO каким должен быть этот метод?
           def linked_nodes(self, left_node: Node, right_node: Optional[Node] = None) -> None:
@@ -27,7 +27,7 @@ files:
       offset: 522
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |-
       @staticmethod
           def linked_nodes(left_node: Node, right_node: Optional[Node] = None) -> None:
@@ -111,5 +111,8 @@ files:
             self.is_valid(next_)
             self.next = next_
   learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Sat, 11 Sep 2021 07:37:04 UTC
 record: -1
