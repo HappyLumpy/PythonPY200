@@ -82,6 +82,7 @@ class LinkedList:
             next_node = self.step_by_step_on_nodes(index + 1)
             prev_node.next = next_node
             current_node.next = None
+        self.len -= 1            
 
 
     def to_list(self) -> list:
