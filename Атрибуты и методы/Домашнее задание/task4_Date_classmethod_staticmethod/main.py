@@ -11,22 +11,30 @@ class Date:
         self.day = day
         self.month = month
         self.year = year
-
+ 
         self.is_valid_date(self.day, self.month, self.year)
-
+    @classmethod
     def is_leap_year(self, year: int):
         """Проверяет, является ли год високосным"""
-        ...  # TODO
-
+        if year % 4 == 0: 
+          return self.DAY_OF_MONTH[1]
+        else: 
+          return self.DAY_OF_MONTH[0]
+ 
     def get_max_day(self, month: int, year: int):
         """Возвращает максимальное количество дней в месяце для указанного года"""
-        ...  # TODO
-
+        list_of_day = self.is_leap_year(self.year)
+        return list_of_day[self.month-1]
+ 
     def is_valid_date(self, day: int, month: int, year: int):
         """Проверяет, является ли дата корректной"""
-        ...  # TODO
-
-
+        if not isinstance(day, int):
+          raise TypeError()
+        if not isinstance(month, int):
+          raise TypeError()
+        if not isinstance(year, int):
+          raise TypeError()
+ 
 if __name__ == "__main__":
-    # Write your solution here
-    pass
+    date = Date(2,2,2020)
+    print(date.get_max_day(1,2021))
