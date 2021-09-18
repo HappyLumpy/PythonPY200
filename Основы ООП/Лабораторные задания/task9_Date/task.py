@@ -23,6 +23,7 @@ class Date:
         self.year = year
 
     def __str__(self):
+        # return f"{self.day}/{self.month:02}/{self.year}"
         if self.day and self.month < 10:
             return f"0{self.day}/0{self.month}/{self.year}"
         elif self.day < 10:
@@ -37,5 +38,5 @@ class Date:
 
 
 if __name__ == "__main__":
-    date = Date(12, 5, 1993)
+    date = Date(12, 10, 1993)
     print(date)

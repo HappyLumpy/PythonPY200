@@ -18,7 +18,7 @@ class Node:
 
     def __str__(self) -> str:
         return str(self.value)
-
+    @classmethod
     def is_valid(self, node: Any) -> None:
         if not isinstance(node, (type(None), Node)):
             raise TypeError

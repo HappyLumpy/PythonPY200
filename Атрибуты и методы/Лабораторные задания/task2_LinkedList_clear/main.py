@@ -66,8 +66,6 @@ class LinkedList:
         node.value = value
 
     def __delitem__(self, index: int):
-        if not isinstance(index, int):
-            raise TypeError()
         if not 0 <= index < self.len:
             raise IndexError()
         current_node = self.step_by_step_on_nodes(index)
@@ -94,10 +92,9 @@ class LinkedList:
         return f"{self.to_list()}"
 
     def clear(self):
-      def clear(self):
-      while self.len > 0:
-        self.__delitem__(0)
-        self.len -= 1
+        while self.len > 0:
+            self.__delitem__(0)
+            self.len -= 1
 
 
 if __name__ == '__main__':
@@ -107,5 +104,3 @@ if __name__ == '__main__':
 
     linked_list.clear()
     print(linked_list)
-
-

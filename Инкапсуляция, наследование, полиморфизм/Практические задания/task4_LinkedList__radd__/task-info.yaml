@@ -4,7 +4,7 @@ files:
   visible: true
   placeholders:
   - offset: 2130
-    length: 172
+    length: 179
     placeholder_text: |-
       def __add__(self, other: "LinkedList") -> "LinkedList":  # TODO метод должен уметь складывать list
               if not isinstance(other, LinkedList):
@@ -14,21 +14,21 @@ files:
       offset: 2130
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |-
       def __add__(self, other: ["LinkedList", list]) -> "LinkedList":
               if not isinstance(other, (LinkedList, list)):
                   raise TypeError
-  - offset: 2387
-    length: 89
+  - offset: 2394
+    length: 157
     placeholder_text: '# TODO определить метод сложения, когда LinkedList находится
       справа от оператора сложения'
     initial_state:
       length: 89
       offset: 2387
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: |-
       def __radd__(self, other: list) -> "LinkedList":
               if not isinstance(other, list):
@@ -178,5 +178,8 @@ files:
             self.is_valid(next_)
             self._next = next_
   learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Sat, 18 Sep 2021 09:13:48 UTC
 record: -1

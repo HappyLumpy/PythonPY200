@@ -4,14 +4,14 @@ files:
   visible: true
   placeholders:
   - offset: 2590
-    length: 44
+    length: 20
     placeholder_text: '... # TODO определить метод для оператора +='
     initial_state:
       length: 44
       offset: 2590
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |-
       if not isinstance(other, (LinkedList, list)):
                   raise TypeError
@@ -164,5 +164,8 @@ files:
             self.is_valid(next_)
             self._next = next_
   learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Sat, 18 Sep 2021 09:04:37 UTC
 record: -1

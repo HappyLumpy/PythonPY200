@@ -4,23 +4,23 @@ files:
   visible: true
   placeholders:
   - offset: 2130
-    length: 43
+    length: 176
     placeholder_text: '# TODO реализовать getter и setter для head'
     initial_state:
       length: 43
       offset: 2130
     initialized_from_dependency: false
-    selected: false
+    selected: true
     status: Unchecked
     encrypted_possible_answer: '# TODO'
-  - offset: 2179
-    length: 43
+  - offset: 2312
+    length: 54
     placeholder_text: '# TODO реализовать getter и setter для tail'
     initial_state:
       length: 43
       offset: 2179
     initialized_from_dependency: false
-    selected: false
+    selected: true
     status: Unchecked
     encrypted_possible_answer: '# TODO'
   text: |
