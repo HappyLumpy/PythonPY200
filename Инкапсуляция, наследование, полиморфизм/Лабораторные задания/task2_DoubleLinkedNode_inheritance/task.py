@@ -38,20 +38,21 @@ class DoubleLinkedNode(Node):
     def __init__(self, value: Any, next_: Optional["Node"] = None, prev: Optional["Node"] = None):
         super().__init__(value, next_)
         self.prev = prev
-    #def __repr__(self):
-        #return f"DoubleLinkedNode({self.value}, {None}, {None})" if self.next is None else f"Node({self.value}, Node({self.next}, Node({self.prev}))"
+    def __repr__(self):
+        return f"DoubleLinkedNode({self.value}, {None}, {None})" if self.next is None else f"DoubleLinkedNode({self.value}, Node({self.next}), Node({self.prev}))"
 
     @property
     def prev(self):
-        return self.prev
+        return self._prev
 
     @prev.setter
     def prev(self, prev_: Optional["Node"]):
         self.is_valid(prev_)
-        self.prev = prev_
+        self._prev = prev_
 
 
 if __name__ == '__main__':
-    dn = DoubleLinkedNode(5)
-
-    print(dn)
+    dn1 = DoubleLinkedNode(5)
+    dn2 = DoubleLinkedNode(4)
+    dn3 = DoubleLinkedNode(6,dn2,dn1)
+    print(repr(dn3))
