@@ -14,7 +14,7 @@ files:
     status: Failed
     encrypted_possible_answer: '# TODO'
   - offset: 2568
-    length: 273
+    length: 368
     placeholder_text: '# TODO реализовать getter и setter для tail'
     initial_state:
       length: 43
@@ -156,13 +156,9 @@ files:
 status: Failed
 feedback:
   message: Incorrect
-  time: Sat, 25 Sep 2021 10:23:38 UTC
+  time: Sat, 25 Sep 2021 10:34:19 UTC
   expected: |
     1
     3
-  actual: |
-    LinkedList([1, 2, 3])
-    4
-    4
-    LinkedList([4, 2, 3])
+  actual: <no output>
 record: -1

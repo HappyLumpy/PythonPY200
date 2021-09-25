@@ -99,6 +99,8 @@ class LinkedList:
             self.len -= 1
         else:
             self._tail = node
+            prev = self.step_by_step_on_nodes(self.len - 2)
+            prev.next = self._tail
 
 
 
@@ -108,9 +110,9 @@ if __name__ == "__main__":
     node = Node(4)
     ll = LinkedList(list_)
     print(repr(ll))
-    ll.head = node
-    print(ll.head)
-    ll.tail = node
-    print(ll.tail)
-
-    print(repr(ll))
+    # ll.head = node
+    # print(ll.head)
+    # ll.tail = node
+    # print(ll.tail)
+    #
+    # print(repr(ll))
