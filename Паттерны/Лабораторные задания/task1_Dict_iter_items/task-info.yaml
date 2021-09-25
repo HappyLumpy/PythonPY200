@@ -4,23 +4,23 @@ files:
   visible: true
   placeholders:
   - offset: 65
-    length: 41
+    length: 6
     placeholder_text: '...):  # TODO Наследование от класса dict'
     initial_state:
       length: 41
       offset: 65
     initialized_from_dependency: false
-    selected: false
+    selected: true
     status: Unchecked
     encrypted_possible_answer: 'dict):'
-  - offset: 111
-    length: 41
+  - offset: 76
+    length: 93
     placeholder_text: '...  # TODO переопределить метод __iter__'
     initial_state:
       length: 41
       offset: 111
     initialized_from_dependency: false
-    selected: false
+    selected: true
     status: Unchecked
     encrypted_possible_answer: |-
       def __iter__(self) -> Iterator[Tuple[Hashable, Any]]:

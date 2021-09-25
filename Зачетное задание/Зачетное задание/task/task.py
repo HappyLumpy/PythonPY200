@@ -1,12 +1,11 @@
-from typing import Any, Optional
+from collections.abc import MutableSequence
 
 
-class Node:
-    """ Класс, который описывает узел связного списка. """
+class LinkedList(MutableSequence):
     ...
 
 
-class DoubleLinkedNode(Node):
+class DoubleLinkedList(LinkedList):
     ...
 
 

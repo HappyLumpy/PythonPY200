@@ -2,4 +2,4 @@ type: framework
 content:
 - DoubleLinkedNode
 - DoubleLinkedList
-current_task: 0
+current_task: 1

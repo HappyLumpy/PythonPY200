@@ -71,21 +71,46 @@ class LinkedList:
 
     @property
     def head(self):
-        return self.head
+        return self._head
 
     @head.setter
     def head(self, node: Optional["Node"]):
-        node(None).is_valid(node)
-        self._head = head
+        Node.is_valid(node)
+        if node is None:
+            self._head = None
+            self.len = 0
+        else:
+            if self.head is None:
+                self._head = node
+                self.len += 1
+            else:
+                node.next = self.head.next
+                self._head = node
 
     @property
     def tail(self):
-        return self.tail
+        return self._tail
+
+    @tail.setter
+    def tail(self, node: Optional["Node"]):
+        Node.is_valid(node)
+        if node is None:
+            self._tail = None
+            self.len -= 1
+        else:
+            self._tail = node
+
+
 
 
 if __name__ == "__main__":
     list_ = [1, 2, 3]
-
+    node = Node(4)
     ll = LinkedList(list_)
+    print(repr(ll))
+    ll.head = node
     print(ll.head)
+    ll.tail = node
     print(ll.tail)
+
+    print(repr(ll))
