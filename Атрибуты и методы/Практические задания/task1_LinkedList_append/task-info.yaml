@@ -4,7 +4,7 @@ files:
   visible: true
   placeholders:
   - offset: 246
-    length: 86
+    length: 43
     placeholder_text: '...  # TODO инициализировать связный список'
     initial_state:
       length: 43
@@ -16,14 +16,14 @@ files:
       if data is not None:
                   for value in data:
                       self.append(value)
-  - offset: 1524
-    length: 272
+  - offset: 1481
+    length: 75
     placeholder_text: '...  # TODO реализовать алгоритм добавления узла в конец последовательности'
     initial_state:
       length: 75
       offset: 1481
     initialized_from_dependency: false
-    selected: true
+    selected: false
     status: Solved
     encrypted_possible_answer: |-
       append_node = Node(value)
@@ -147,5 +147,5 @@ files:
 status: Solved
 feedback:
   message: Congratulations!
-  time: Sat, 11 Sep 2021 08:53:40 UTC
+  time: Fri, 17 Sep 2021 19:49:43 UTC
 record: -1

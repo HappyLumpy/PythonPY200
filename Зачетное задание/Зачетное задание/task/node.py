@@ -14,9 +14,9 @@ class Node:
     def __str__(self) -> str:
         return str(self.value)
 
-    @staticmethod
-    def is_valid(node: Any) -> None:
-        if not isinstance(node, (type(None), Node)):
+    @classmethod
+    def is_valid(cls, node: Any) -> None:
+        if not isinstance(node, (type(None), cls)):
             raise TypeError
 
     @property

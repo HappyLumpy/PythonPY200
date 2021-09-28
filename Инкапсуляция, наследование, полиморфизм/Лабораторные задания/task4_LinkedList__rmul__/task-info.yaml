@@ -3,15 +3,15 @@ files:
 - name: main.py
   visible: true
   placeholders:
-  - offset: 2878
-    length: 47
+  - offset: 2945
+    length: 19
     placeholder_text: '...  # TODO определить правостороннее умножение'
     initial_state:
-      length: 47
-      offset: 2878
+      length: 19
+      offset: 2945
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: |-
       if not isinstance(other, int):
                   raise TypeError
@@ -175,5 +175,8 @@ files:
             self.is_valid(next_)
             self._next = next_
   learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Thu, 23 Sep 2021 18:15:08 UTC
 record: -1

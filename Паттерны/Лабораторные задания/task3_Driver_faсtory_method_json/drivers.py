@@ -41,7 +41,7 @@ class SimpleFileDriver(IStructureDriver):
         return f"{self.__class__.__name__}(\"{self.filename}\")"
 
 
-# TODO
+# TODO Реализовать класс JsonFileDriver
 
 
 if __name__ == '__main__':

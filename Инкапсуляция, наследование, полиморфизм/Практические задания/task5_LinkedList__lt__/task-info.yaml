@@ -11,7 +11,7 @@ files:
       offset: 105
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: '@total_ordering'
   - offset: 2577
     length: 30
@@ -21,7 +21,7 @@ files:
       offset: 2577
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |-
       def __lt__(self, other: "LinkedList") -> bool:
               if not isinstance(other, LinkedList):
@@ -180,6 +180,6 @@ files:
             self.is_valid(next_)
             self._next = next_
   learner_created: false
-status: Unchecked
+status: Solved
 record: -1
 post_submission_on_open: true

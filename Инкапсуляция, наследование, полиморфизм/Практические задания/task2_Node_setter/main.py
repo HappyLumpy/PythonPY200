@@ -12,7 +12,6 @@ class Node:
         """
         self.value = value
 
-        # TODO заменить на вызов setter
         self.next = next_
 
     def __repr__(self) -> str:

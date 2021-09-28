@@ -4,14 +4,14 @@ files:
   visible: true
   placeholders:
   - offset: 3214
-    length: 61
+    length: 86
     placeholder_text: '...  # TODO определить одновременное умножение и присваивание'
     initial_state:
-      length: 61
+      length: 86
       offset: 3214
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: |-
       if not isinstance(other, int):
                   raise TypeError
@@ -187,5 +187,8 @@ files:
             self.is_valid(next_)
             self._next = next_
   learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Thu, 23 Sep 2021 18:18:17 UTC
 record: -1

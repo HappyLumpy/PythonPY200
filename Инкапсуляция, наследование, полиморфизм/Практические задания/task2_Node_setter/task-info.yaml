@@ -3,21 +3,21 @@ files:
 - name: main.py
   visible: true
   placeholders:
-  - offset: 399
-    length: 57
+  - offset: 397
+    length: 7
     placeholder_text: |-
       # TODO заменить на вызов setter
               self.next = None
               self.set_next(next_)
     initial_state:
-      length: 85
-      offset: 399
+      length: 47
+      offset: 397
     initialized_from_dependency: false
     selected: true
     status: Solved
     encrypted_possible_answer: 'self.next = next_  # вызовется setter'
-  - offset: 999
-    length: 0
+  - offset: 741
+    length: 153
     placeholder_text: |-
       # TODO заменить на getter и setter
           def set_next(self, next_: Optional["Node"] = None) -> None:
@@ -25,7 +25,7 @@ files:
               self.next = next_
     initial_state:
       length: 153
-      offset: 821
+      offset: 781
     initialized_from_dependency: false
     selected: true
     status: Solved
@@ -96,5 +96,5 @@ files:
 status: Solved
 feedback:
   message: Congratulations!
-  time: Sat, 18 Sep 2021 07:40:20 UTC
+  time: Thu, 23 Sep 2021 14:11:56 UTC
 record: -1

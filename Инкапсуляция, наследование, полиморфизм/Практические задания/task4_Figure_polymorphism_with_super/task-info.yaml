@@ -4,7 +4,7 @@ files:
   visible: true
   placeholders:
   - offset: 388
-    length: 14
+    length: 47
     placeholder_text: '...  # TODO вызываем метод area базового класса'
     initial_state:
       length: 47
@@ -54,5 +54,5 @@ files:
 status: Solved
 feedback:
   message: Congratulations!
-  time: Sat, 18 Sep 2021 08:02:37 UTC
+  time: Thu, 23 Sep 2021 14:12:19 UTC
 record: -1

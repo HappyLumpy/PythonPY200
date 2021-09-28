@@ -72,7 +72,14 @@ class LinkedList:
     def __len__(self):
         return self.len
 
-    # TODO определить метод __eq__
+    def __eq__(self, other):
+        if not isinstance(other, LinkedList):
+            raise TypeError
+        for keys, values in enumerate(self):
+            if other[keys] == values and len(self) == len(other):
+                return True
+            else:
+                return False
 
 
 if __name__ == "__main__":

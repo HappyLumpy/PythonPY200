@@ -38,5 +38,8 @@ files:
   visible: true
   text: '...'
   learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Sun, 26 Sep 2021 16:40:58 UTC
 record: 2

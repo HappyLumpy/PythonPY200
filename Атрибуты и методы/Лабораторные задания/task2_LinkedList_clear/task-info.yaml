@@ -3,14 +3,14 @@ files:
 - name: main.py
   visible: true
   placeholders:
-  - offset: 1983
-    length: 0
+  - offset: 1992
+    length: 28
     placeholder_text: '...  # TODO проверка индекса'
     initial_state:
       length: 28
       offset: 1992
     initialized_from_dependency: false
-    selected: true
+    selected: false
     status: Solved
     encrypted_possible_answer: |-
       if not isinstance(index, int):
@@ -18,14 +18,14 @@ files:
 
               if not 0 <= index < self.len:  # для for
                   raise IndexError()
-  - offset: 1991
-    length: 0
+  - offset: 2030
+    length: 29
     placeholder_text: '...  # TODO алгоритм удаления'
     initial_state:
       length: 29
       offset: 2030
     initialized_from_dependency: false
-    selected: true
+    selected: false
     status: Solved
     encrypted_possible_answer: |-
       if index == 0:
@@ -41,7 +41,7 @@ files:
                   self.linked_nodes(prev_node, next_node)
 
               self.len -= 1
-  - offset: 2278
+  - offset: 2347
     length: 78
     placeholder_text: '...  # TODO поэксперементируйте, как с помощью функции del
       очистить LinkedList'
@@ -199,5 +199,5 @@ files:
 status: Solved
 feedback:
   message: Congratulations!
-  time: Sat, 18 Sep 2021 07:03:16 UTC
+  time: Fri, 17 Sep 2021 19:59:33 UTC
 record: -1

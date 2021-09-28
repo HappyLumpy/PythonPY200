@@ -213,7 +213,7 @@ files:
   visible: true
   placeholders:
   - offset: 1172
-    length: 6
+    length: 39
     placeholder_text: '# TODO'
     dependency:
       section: Паттерны
@@ -223,9 +223,9 @@ files:
       placeholder: 1
       is_visible: true
     initial_state:
-      length: 6
+      length: 39
       offset: 1172
-    initialized_from_dependency: false
+    initialized_from_dependency: true
     selected: false
     status: Solved
     encrypted_possible_answer: |-
@@ -307,7 +307,7 @@ files:
   visible: true
   placeholders:
   - offset: 641
-    length: 1
+    length: 51
     placeholder_text: '#'
     dependency:
       section: Паттерны
@@ -317,9 +317,9 @@ files:
       placeholder: 1
       is_visible: true
     initial_state:
-      length: 1
+      length: 51
       offset: 641
-    initialized_from_dependency: false
+    initialized_from_dependency: true
     selected: false
     status: Solved
     encrypted_possible_answer: |-

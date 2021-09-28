@@ -4,35 +4,35 @@ files:
   visible: true
   placeholders:
   - offset: 399
-    length: 46
+    length: 0
     placeholder_text: 'self.next = None  # TODO заменить на private'
     initial_state:
-      length: 44
+      length: 0
       offset: 399
     initialized_from_dependency: false
-    selected: true
+    selected: false
     status: Solved
     encrypted_possible_answer: self.__next = None
-  - offset: 522
-    length: 128
+  - offset: 463
+    length: 102
     placeholder_text: 'f"Node({self.value}, {None})" if self.next is None else f"Node({self.value},
       Node({self.next}))"  # TODO заменить на private'
     initial_state:
-      length: 124
-      offset: 520
+      length: 102
+      offset: 463
     initialized_from_dependency: false
-    selected: true
+    selected: false
     status: Solved
     encrypted_possible_answer: f"Node({self.value}, {None})" if self.__next is None
       else f"Node({self.value}, Node({self.__next}))"
-  - offset: 940
-    length: 47
+  - offset: 849
+    length: 25
     placeholder_text: 'self.next = next_  # TODO заменить на private'
     initial_state:
-      length: 45
-      offset: 934
+      length: 25
+      offset: 849
     initialized_from_dependency: false
-    selected: true
+    selected: false
     status: Solved
     encrypted_possible_answer: self.__next = next_
   text: |
@@ -87,5 +87,5 @@ files:
 status: Solved
 feedback:
   message: Congratulations!
-  time: Sat, 18 Sep 2021 07:28:47 UTC
+  time: Thu, 23 Sep 2021 14:11:10 UTC
 record: -1

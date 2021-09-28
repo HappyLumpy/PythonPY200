@@ -4,17 +4,17 @@ files:
   visible: true
   placeholders:
   - offset: 245
-    length: 32
+    length: 33
     placeholder_text: '...  # TODO добавить атрибут tail'
     initial_state:
       length: 33
       offset: 245
     initialized_from_dependency: false
-    selected: true
+    selected: false
     status: Solved
     encrypted_possible_answer: self.tail = self.head
-  - offset: 597
-    length: 89
+  - offset: 610
+    length: 181
     placeholder_text: |-
       last_index = self.len - 1  # TODO Переделать через атрибут tail
                   last_node = self.step_by_step_on_nodes(last_index)
@@ -24,20 +24,20 @@ files:
       length: 181
       offset: 610
     initialized_from_dependency: false
-    selected: true
+    selected: false
     status: Solved
     encrypted_possible_answer: |-
       self.linked_nodes(self.tail, append_node)
                   self.tail = append_node
-  - offset: 1450
-    length: 27
+  - offset: 1555
+    length: 89
     placeholder_text: 'left_node.set_next(right_node)  # TODO next теперь свойство
       имеет setter, используйте это'
     initial_state:
       length: 89
       offset: 1555
     initialized_from_dependency: false
-    selected: true
+    selected: false
     status: Solved
     encrypted_possible_answer: left_node.next = right_node
   text: |
@@ -173,5 +173,5 @@ files:
 status: Solved
 feedback:
   message: Congratulations!
-  time: Sat, 18 Sep 2021 08:43:43 UTC
+  time: Thu, 23 Sep 2021 14:12:31 UTC
 record: -1

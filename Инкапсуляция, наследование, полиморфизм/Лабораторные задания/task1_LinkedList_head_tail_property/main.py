@@ -19,8 +19,10 @@ class LinkedList:
         append_node = Node(value)
 
         if self.head is None:
+            print('append', append_node)
             self.head = self.tail = append_node
         else:
+            print('append',append_node)
             self.linked_nodes(self.tail, append_node)
             self.tail = append_node
 
@@ -44,7 +46,6 @@ class LinkedList:
     def linked_nodes(left_node: Node, right_node: Optional[Node] = None) -> None:
         """
         Функция, которая связывает между собой два узла.
-
         :param left_node: Левый или предыдущий узел
         :param right_node: Правый или следующий узел
         """
@@ -96,23 +97,27 @@ class LinkedList:
         Node.is_valid(node)
         if node is None:
             self._tail = None
-            self.len -= 1
         else:
-            self._tail = node
-            prev = self.step_by_step_on_nodes(self.len - 2)
-            prev.next = self._tail
+            if self.len == 1:
+                self._tail = self.head = node
+            else:
+                prev = self.step_by_step_on_nodes(self.len - 2)
+                print("ono", prev)
+                self._tail = node
+                prev.next = self._tail
+
 
 
 
 
 if __name__ == "__main__":
     list_ = [1, 2, 3]
-    node = Node(4)
+    test = Node(10)
     ll = LinkedList(list_)
+    ll.tail = test
+
+    print(ll.head)
     print(repr(ll))
-    # ll.head = node
-    # print(ll.head)
-    # ll.tail = node
-    # print(ll.tail)
-    #
-    # print(repr(ll))
+    print(ll.tail)
+
+
