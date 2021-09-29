@@ -1,5 +1,5 @@
 from collections.abc import MutableSequence
-from node import Node
+from node import Node, DoubleLinkedNode
 from typing import Any, Iterable, Optional
 
 
@@ -7,26 +7,32 @@ class LinkedList(MutableSequence):
     def __init__(self, data: Iterable = None):
         self.len = 0
         self.head: Optional[Node] = None
-        self.tail = self.head
+        self._tail = self.head
 
         if data is not None:
             for value in data:
                 self.append(value)
 
     def append(self, value: Any):
+        """ Добавление элемента в конец связного списка. """
         append_node = Node(value)
+
         if self.head is None:
-            self.head = self.tail = append_node
+            self.head = self._tail = append_node
         else:
             self.linked_nodes(self.tail, append_node)
-            self.tail = append_node
+            self._tail = append_node
 
         self.len += 1
+
+    @staticmethod
+    def linked_nodes(left_node: Node, right_node: Optional[Node] = None) -> None:
+        left_node.next = right_node
 
     def step_by_step_on_nodes(self, index: int) -> Node:
         if not isinstance(index, int):
             raise TypeError()
-        if not 0 <= index < self.len:  # для for
+        if not 0 <= index < self.len:
             raise IndexError()
         current_node = self.head
         for _ in range(index):
@@ -40,11 +46,12 @@ class LinkedList(MutableSequence):
             raise IndexError()
         current_node = self.step_by_step_on_nodes(index)
         if index == 0:
-            self.head = self.head.next
+            self._head = self._head.next
             current_node.next = None
         elif index == self.len - 1:
             prev_node = self.step_by_step_on_nodes(index - 1)
             prev_node.next = None
+            self._tail = prev_node
         else:
             prev_node = self.step_by_step_on_nodes(index - 1)
             next_node = self.step_by_step_on_nodes(index + 1)
@@ -54,10 +61,6 @@ class LinkedList(MutableSequence):
 
     def __len__(self):
         return self.len
-
-    @staticmethod
-    def linked_nodes(left_node: Node, right_node: Optional[Node] = None) -> None:
-        left_node.next = right_node
 
     def __getitem__(self, index: int) -> Any:
         """ Метод возвращает значение узла по указанному индексу. """
@@ -69,14 +72,8 @@ class LinkedList(MutableSequence):
         node = self.step_by_step_on_nodes(index)
         node.value = value
 
-
     def to_list(self) -> list:
-        list_node = []
-        for value in range(self.len - 1):
-            list_node.append(self[value])
-        return list_node
-
-
+        return [linked_list_value for linked_list_value in self]
 
     def __repr__(self) -> str:
         return f"{self.__class__.__name__}({self.to_list()})"
@@ -113,7 +110,6 @@ class LinkedList(MutableSequence):
         else:
             if self.head is None:
                 self._head = node
-                self.len += 1
             else:
                 node.next = self.head.next
                 self._head = node
@@ -128,22 +124,75 @@ class LinkedList(MutableSequence):
         if node is None:
             self._tail = None
         else:
-            if self.tail is None:
-                self._tail = node
-            elif self.len == 1:
-                self._tail = node
+            if self.len == 1:
+                self._tail = self.head = node
             else:
-                prev = self.step_by_step_on_nodes(self.len-2)
+                prev = self.step_by_step_on_nodes(self.len - 2)
                 self._tail = node
                 prev.next = self._tail
 
 
 class DoubleLinkedList(LinkedList):
-    ...
+    def __init__(self, data: Iterable = None):
+        super().__init__(data=data)
+
+
+    @staticmethod
+    def linked_nodes(left_node: Node, right_node: Optional[Node] = None) -> None:
+        right_node.prev = left_node
+        left_node.next = right_node
+
+
+    def append(self, value: Any):
+        """ Добавление элемента в конец связного списка. """
+        append_node = DoubleLinkedNode(value)
+
+        if self.head is None:
+            self.head = self._tail = append_node
+        else:
+
+            self.linked_nodes(self.tail, append_node)
+            self._tail = append_node
+
+
+        self.len += 1
+
+    def __delitem__(self, index: int):
+        if not isinstance(index, int):
+            raise TypeError()
+        if not 0 <= index < self.len:
+            raise IndexError()
+        current_node = self.step_by_step_on_nodes(index)
+        if index == 0:
+            self._head = self._head.next
+            current_node.next = None
+            self.head.prev = None
+        elif index == self.len - 1:
+            prev_node = self.step_by_step_on_nodes(index - 1)
+            prev_node.next = None
+            self._tail = prev_node
+        else:
+            prev_node = self.step_by_step_on_nodes(index - 1)
+            next_node = self.step_by_step_on_nodes(index + 1)
+            prev_node.next = next_node
+            next_node.prev = prev_node
+            current_node.next = None
+        self.len -= 1
 
 
 if __name__ == "__main__":
-    list_ = [i for i in range(10)]
+    list_ = []
+    new_1 = DoubleLinkedNode(1)
+    new_2 = DoubleLinkedNode(2)
+    new_3 = DoubleLinkedNode(3)
+    new_4 = DoubleLinkedNode(4)
     ll = LinkedList(list_)
-    print(ll)
-    print(repr(ll))
+
+    dll = DoubleLinkedList(list_)
+    dll.append(new_1)
+    dll.append(new_2)
+    dll.append(new_3)
+    dll.append(new_4)
+    print(repr(dll.head.next.next.next))
+    print(repr(dll))
+

@@ -100,7 +100,7 @@ if __name__ == '__main__':
     linked_list = LinkedList(list_)
     print(linked_list)
 
-    del linked_list[1]
+    del linked_list[0]
     print(linked_list)
 
     del linked_list[1]

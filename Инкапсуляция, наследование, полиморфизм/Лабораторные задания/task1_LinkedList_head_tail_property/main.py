@@ -8,7 +8,7 @@ class LinkedList:
         """Конструктор связного списка"""
         self.len = 0
         self.head: Optional[Node] = None
-        self.tail = self.head
+        self._tail = self.head
 
         if data is not None:
             for value in data:
@@ -19,12 +19,10 @@ class LinkedList:
         append_node = Node(value)
 
         if self.head is None:
-            print('append', append_node)
-            self.head = self.tail = append_node
+            self.head = self._tail = append_node
         else:
-            print('append',append_node)
             self.linked_nodes(self.tail, append_node)
-            self.tail = append_node
+            self._tail = append_node
 
         self.len += 1
 
@@ -46,6 +44,7 @@ class LinkedList:
     def linked_nodes(left_node: Node, right_node: Optional[Node] = None) -> None:
         """
         Функция, которая связывает между собой два узла.
+
         :param left_node: Левый или предыдущий узел
         :param right_node: Правый или следующий узел
         """
@@ -83,7 +82,6 @@ class LinkedList:
         else:
             if self.head is None:
                 self._head = node
-                self.len += 1
             else:
                 node.next = self.head.next
                 self._head = node
@@ -91,7 +89,6 @@ class LinkedList:
     @property
     def tail(self):
         return self._tail
-
     @tail.setter
     def tail(self, node: Optional["Node"]):
         Node.is_valid(node)
@@ -102,7 +99,6 @@ class LinkedList:
                 self._tail = self.head = node
             else:
                 prev = self.step_by_step_on_nodes(self.len - 2)
-                print("ono", prev)
                 self._tail = node
                 prev.next = self._tail
 
@@ -110,14 +106,14 @@ class LinkedList:
 
 
 
-if __name__ == "__main__":
-    list_ = [1, 2, 3]
-    test = Node(10)
-    ll = LinkedList(list_)
-    ll.tail = test
 
+if __name__ == "__main__":
+    list_ = [i for i in range(10)]
+    new_tail = Node(5)
+    ll = LinkedList(list_)
     print(ll.head)
-    print(repr(ll))
+    ll.tail = new_tail
     print(ll.tail)
+    print(repr(ll))
 
 
