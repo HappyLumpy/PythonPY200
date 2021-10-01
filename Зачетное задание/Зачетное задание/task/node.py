@@ -35,7 +35,10 @@ class DoubleLinkedNode(Node):
         self.prev = prev
 
     def __repr__(self):
-        return f"DoubleLinkedNode({self.value}, {None}, {None})" if self.next is None else f"DoubleLinkedNode({self.value}, Node({self.next}), Node({self.prev}))"
+        if self.next is None and self.prev is None:
+            return f"DoubleLinkedNode({self.value}, {None}, {None}))"
+        else:
+            return f"DoubleLinkedNode({self.value}, {None}, (DoubleLinkedNode({self.prev}))" if self.next is None else f"DoubleLinkedNode({self.value}, DoubleLinkedNode({self.next}), DoubleLinkedNode({self.prev}))"
 
     @property
     def prev(self):

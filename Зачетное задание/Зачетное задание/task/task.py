@@ -121,6 +121,7 @@ class LinkedList(MutableSequence):
     @tail.setter
     def tail(self, node: Optional["Node"]):
         Node.is_valid(node)
+        print('srabotal setter tail')
         if node is None:
             self._tail = None
         else:
@@ -136,25 +137,18 @@ class DoubleLinkedList(LinkedList):
     def __init__(self, data: Iterable = None):
         super().__init__(data=data)
 
-
     @staticmethod
     def linked_nodes(left_node: Node, right_node: Optional[Node] = None) -> None:
         right_node.prev = left_node
         left_node.next = right_node
 
-
     def append(self, value: Any):
-        """ Добавление элемента в конец связного списка. """
         append_node = DoubleLinkedNode(value)
-
         if self.head is None:
             self.head = self._tail = append_node
         else:
-
             self.linked_nodes(self.tail, append_node)
             self._tail = append_node
-
-
         self.len += 1
 
     def __delitem__(self, index: int):
@@ -179,6 +173,23 @@ class DoubleLinkedList(LinkedList):
             current_node.next = None
         self.len -= 1
 
+    def insert(self, index: int, value: Any) -> None:
+        if not isinstance(index, int):
+            raise TypeError()
+        insertnode = DoubleLinkedNode(value)
+        if index == 0:
+            self.linked_nodes(insertnode, self.head)
+            self.head = insertnode
+        elif index >= self.len - 1:
+            tail = self.step_by_step_on_nodes(self.len - 1)
+            self.linked_nodes(tail, insertnode)
+        else:
+            prev_node = self.step_by_step_on_nodes(index - 1)
+            self.linked_nodes(insertnode, prev_node.next)
+            self.linked_nodes(prev_node, insertnode)
+            prev_node.next = insertnode
+        self.len += 1
+
 
 if __name__ == "__main__":
     list_ = []
@@ -193,6 +204,12 @@ if __name__ == "__main__":
     dll.append(new_2)
     dll.append(new_3)
     dll.append(new_4)
-    print(repr(dll.head.next.next.next))
-    print(repr(dll))
+    ll.append(new_1)
+    ll.append(new_2)
+    ll.append(new_3)
+    ll.append(new_4)
+    dll.insert(2, DoubleLinkedNode(4))
+
+    print(dll)
+    print(repr(dll.tail))
 
