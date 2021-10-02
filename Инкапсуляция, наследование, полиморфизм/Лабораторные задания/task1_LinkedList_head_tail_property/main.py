@@ -108,12 +108,10 @@ class LinkedList:
 
 
 if __name__ == "__main__":
-    list_ = [i for i in range(10)]
-    new_tail = Node(5)
+    list_ = [1,2,3]
     ll = LinkedList(list_)
     print(ll.head)
-    ll.tail = new_tail
     print(ll.tail)
-    print(repr(ll))
+
 
 

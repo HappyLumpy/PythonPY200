@@ -38,8 +38,11 @@ files:
   visible: true
   text: '...'
   learner_created: false
+- name: test_linked_list.py
+  visible: true
+  learner_created: true
 status: Solved
 feedback:
   message: Congratulations!
-  time: Thu, 30 Sep 2021 16:32:12 UTC
+  time: Sat, 02 Oct 2021 10:03:32 UTC
 record: 2

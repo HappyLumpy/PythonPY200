@@ -3,22 +3,22 @@ files:
 - name: main.py
   visible: true
   placeholders:
-  - offset: 1714
-    length: 1
+  - offset: 2152
+    length: 434
     placeholder_text: '# TODO реализовать getter и setter для head'
     initial_state:
-      length: 1
-      offset: 2180
+      length: 43
+      offset: 2130
     initialized_from_dependency: false
     selected: true
     status: Solved
     encrypted_possible_answer: '# TODO'
-  - offset: 1714
-    length: 122
+  - offset: 2590
+    length: 368
     placeholder_text: '# TODO реализовать getter и setter для tail'
     initial_state:
-      length: 122
-      offset: 2180
+      length: 43
+      offset: 2179
     initialized_from_dependency: false
     selected: true
     status: Solved
@@ -156,5 +156,5 @@ files:
 status: Solved
 feedback:
   message: Congratulations!
-  time: Wed, 29 Sep 2021 17:36:01 UTC
+  time: Sat, 02 Oct 2021 06:58:52 UTC
 record: -1

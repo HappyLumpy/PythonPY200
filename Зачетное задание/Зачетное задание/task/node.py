@@ -2,11 +2,9 @@ from typing import Any, Optional
 
 
 class Node:
-    """ Класс, который описывает узел связного списка. """
-
     def __init__(self, value: Any, next_: Optional["Node"] = None):
         self.value = value
-        self.next = next_  # вызовется setter
+        self.next = next_
 
     def __repr__(self) -> str:
         return f"Node({self.value}, {None})" if self.next is None else f"Node({self.value}, Node({self.next}))"
@@ -38,7 +36,8 @@ class DoubleLinkedNode(Node):
         if self.next is None and self.prev is None:
             return f"DoubleLinkedNode({self.value}, {None}, {None}))"
         else:
-            return f"DoubleLinkedNode({self.value}, {None}, (DoubleLinkedNode({self.prev}))" if self.next is None else f"DoubleLinkedNode({self.value}, DoubleLinkedNode({self.next}), DoubleLinkedNode({self.prev}))"
+            return f"DoubleLinkedNode({self.value}, {None}, (DoubleLinkedNode({self.prev}))" if self.next is None \
+                else f"DoubleLinkedNode({self.value}, DoubleLinkedNode({self.next}), DoubleLinkedNode({self.prev}))"
 
     @property
     def prev(self):

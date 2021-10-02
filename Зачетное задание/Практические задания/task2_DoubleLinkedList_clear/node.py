@@ -33,5 +33,3 @@ class Node:
         self.is_valid(next_)
         self._next = next_
 
-    def __del__(self):
-        print("Вызван метод \"__del__\"")
